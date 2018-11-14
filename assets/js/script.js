@@ -1,8 +1,10 @@
+"use strict";
+
 /* Psuedo code 
   
   i plan on using switch statements to manage player enrollment ability using child counts
 
-  i need a little more time I know i needed MVP but I'm trying.
+  i need a little more time I know i needed MVP but I got set back this week feeling under the weather.
 
   Step 1. Define game variables
           Variables, properties, and methods needed:
@@ -38,27 +40,35 @@ firebase.initializeApp(config);
 var gameMechanics = {
   localID: 0,
   playerCount: 0,
-  player: class {
-    constructor(name, age, country) {
-      this.name = name;
-      this.age = age;
-      this.country = country;
-      this.wins = 0;
-      this.losses = 0;
-      this.choice;
-      this.playerOne = false;
-      this.PlayerTwo = false;
-    }
+  player: {
+    name: "",
+    age: 0,
+    country: "",
+    wins: 0,
+    losses: 0,
+    choice: "",
+    playerOne: false,
+    PlayerTwo: false
   },
 
-  choiceLogic: () => {},
+  roundLogic: () => {},
 
-  enrollmentLogic: () => {
-    $("#submitPlayer").on("submit", event => {
+  enrollmentLogic: function() {
+    $("form").on("submit", function(event) {
       event.preventDefault();
+      $("#startControlDiv").fadeOUt(500);
     });
   }
 };
+
+let enrollmentButtonTemplate = `<button id="regButton"type="button"class="btn btn-primary mt-5" data-toggle="modal"
+  data-target="#enrollmentModal">Press to Start. Don't Wait, I'll Disappear If someone joins ahead of you.
+</button>`;
+console.log(enrollmentButtonTemplate);
+var startControlDiv = $("#startControlDiv");
+
+$(startControlDiv).html(enrollmentButtonTemplate);
+gameMechanics.enrollmentLogic();
 
 /*
   Step 2. Define win/loss logic using nested switch/case statements(
