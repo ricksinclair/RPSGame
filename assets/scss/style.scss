@@ -1,12 +1,64 @@
 #gui {
+  margin-top: 70px;
+  height: 300px;
   color: white;
   svg {
     background-color: #ff7700;
   }
+
   .card {
+    border-color: darkred;
+
     background-color: #ff7700;
     .list-group-item {
       background-color: #ff7700;
+      color: white;
+      border-color: darkred;
+      hr {
+        color: darkred;
+      }
     }
+  }
+}
+
+.modal-dialog,
+.modal-header,
+.modal-body,
+.modal-footer {
+  border-width: 2px;
+  border-style: hidden;
+  background-color: #ff7700;
+
+  color: white;
+  hr {
+    color: white;
+  }
+}
+
+.playerChoice {
+  .cls-1 {
+    fill: #fff;
+  }
+  .cls-1,
+  .cls-2 {
+    stroke: #000;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 4.06px;
+  }
+  .cls-2 {
+    fill: none;
+  }
+}
+
+#kaboom {
+  .cls-1 {
+    fill: #ffda00;
+  }
+  .cls-2 {
+    fill: #bd1622;
+  }
+  .cls-3 {
+    fill: red;
   }
 }

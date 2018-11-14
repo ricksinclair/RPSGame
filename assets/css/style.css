@@ -1,8 +1,47 @@
 #gui {
+  margin-top: 70px;
+  height: 300px;
   color: white; }
   #gui svg {
     background-color: #ff7700; }
   #gui .card {
+    border-color: darkred;
     background-color: #ff7700; }
     #gui .card .list-group-item {
-      background-color: #ff7700; }
+      background-color: #ff7700;
+      color: white;
+      border-color: darkred; }
+      #gui .card .list-group-item hr {
+        color: darkred; }
+
+.modal-dialog,
+.modal-header,
+.modal-body,
+.modal-footer {
+  border-width: 2px;
+  border-style: hidden;
+  background-color: #ff7700;
+  color: white; }
+  .modal-dialog hr,
+  .modal-header hr,
+  .modal-body hr,
+  .modal-footer hr {
+    color: white; }
+
+.playerChoice .cls-1 {
+  fill: #fff; }
+.playerChoice .cls-1,
+.playerChoice .cls-2 {
+  stroke: #000;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 4.06px; }
+.playerChoice .cls-2 {
+  fill: none; }
+
+#kaboom .cls-1 {
+  fill: #ffda00; }
+#kaboom .cls-2 {
+  fill: #bd1622; }
+#kaboom .cls-3 {
+  fill: red; }

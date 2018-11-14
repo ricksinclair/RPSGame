@@ -7,7 +7,7 @@
                                                     -playerCount
                                                     -player1(values)
                                                       -1 player1.choice 
-                                                      -1 player1.name
+                                                      -1 player1.name 
                                                       -1 player1.location
                                                       -1 player1.wins ( i want these in local storage)
                                                       -1 player1.losses  ( i want these in local storage)
@@ -23,6 +23,25 @@
                                                       -results
                                                       -newGame
                                                       -newPlayer(1 or 2)
+
+  Step 2. Define win/loss logic using nested switch/case statements(
+                                      they'll nest  like:
+                                      
+                                      
+                                      switch (player1){
+                                        case player1.choice = "Rock"{
+
+                                        
+                                          switch(player2){
+                                            case player2.choice="paper" 
+
+                                          }
+
+                                        }
+
+                                      }
+                                      
+                                      (since two parties choices need to be considered) 
   */
 
 ///////////////////////////////////  ,/
