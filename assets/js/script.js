@@ -9,12 +9,12 @@
   Step 1. Define game variables
           Variables, properties, and methods needed:
                                                     -playerCount
-                                                    -playerPrototype
-                                                      -1 player1.choice 
-                                                      -1 player1.name 
-                                                      -1 player1.location
-                                                      -1 player1.wins ( i want these in local storage)
-                                                      -1 player1.losses  ( i want these in local storage)
+                                                    -playerPrototype ex
+                                                      -1 player.choice 
+                                                      -1 player.name 
+                                                      -1 player.location
+                                                      -1 player.wins ( i want these in local storage)
+                                                      -1 player.losses  ( i want these in local storage)
                                                     
                                                       i want these in local storage)
                                                      -gameState(methods)
@@ -23,7 +23,24 @@
                                                       -results
                                                       -newGame
                                                       -newPlayer(1 or 2)
-*/
+
+
+i want global player IDs set for both players on firebase, but i want the 
+script to make each player a localPlayer and remotePlayer
+
+so if bob and tim are playing, from bob's perspective when he 
+excecutes the script, he'll be the 
+localPlayer and tim will be the remote. From tim's perspective
+tim will be the localPlayer and bob will be the remotePlayer. 
+
+These two designationsshould be able to help me create a consistent
+ layout on each player's screen. 
+
+so essentially i should be able to create a player object when each user joins. 
+each child should be able to report back an ID before we copy things over to local variables
+localPlayer & remotePlayer. 
+
+                                                      */
 
 //initialize firebase
 var config = {
